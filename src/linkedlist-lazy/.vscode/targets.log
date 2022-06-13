@@ -1,0 +1,474 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+********************************** Using as a default number of cores: 24 on 1 socket
+********************************** Using as a default frequency      : 3.700 GHz
+********************************** If incorrect, create a manual entry in common/Makefile.common
+ 
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Mon Jun 13 23:12:50 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+DESKTOP_SESSION = xfce
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_SESSION_CLASS = user
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+GTK3_MODULES = xapp-gtk3-module
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /home/ml/.Xauthority
+# environment
+GDMSESSION = xfce
+# default
+MAKE_VERSION := 4.2.1
+# makefile
+CURDIR := /home/ml/Desktop/ASCYLIB/src/linkedlist-lazy
+# makefile
+SHELL = /bin/sh
+# environment
+GDM_LANG = en_US
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/share/code/code
+# makefile (from 'Makefile', line 9)
+CFLAGS = -O3 -D_GNU_SOURCE -D$(LOCK) -DDEFAULT -DCORE_NUM=${CORE_NUM} -DFREQ_GHZ=${FREQ_GHZ} -m64 -Wall -fno-strict-aliasing -I$(LIBAO_INC) -I$(ROOT)/include -I$(LIBSSMEM)/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-xfce:/etc/xdg:/etc/xdg
+# makefile (from '../../common/Makefile.common', line 53)
+BUILDIR = $(ROOT)/build
+# makefile (from '../../common/Makefile.common', line 1)
+MAKEFILE_LIST :=  Makefile ../../common/Makefile.common
+# makefile (from '../../common/Makefile.common', line 14)
+TILERA_CC = tile-gcc
+# automatic
+@F = $(notdir $@)
+# makefile (from '../../common/Makefile.common', line 7)
+TBB_INCLUDES = /home/trigonak/code/tbb42_20140122oss/include
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+MANDATORY_PATH = /usr/share/gconf/xfce.mandatory.path
+# environment
+XDG_DATA_DIRS = /usr/share/xfce4:/usr/share/xfce:/home/ml/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/usr/share
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# makefile (from '../../common/Makefile.common', line 17)
+VERSION = O3
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+VSCODE_CWD = /home/ml
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /home/ml/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# makefile (from '../../common/Makefile.common', line 96)
+OS_NAME = $(shell uname -s)
+# makefile (from '../../common/Makefile.common', line 125)
+PC_NAME = $(shell uname -n)
+# makefile (from '../../common/Makefile.common', line 207)
+ARCH_NAME = $(shell uname -m)
+# environment
+SESSION_MANAGER = local/ml-unify:@/tmp/.ICE-unix/1535,unix/ml-unify:/tmp/.ICE-unix/1535
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# makefile (from '../../common/Makefile.common', line 193)
+CORE_SPEED_KHz := 3700000
+# makefile (from 'Makefile', line 1)
+ROOT = ../..
+# makefile (from 'Makefile', line 13)
+PROF = $(ROOT)/src
+# environment
+XDG_MENU_PREFIX = xfce-
+# environment
+VSCODE_LOG_STACK = false
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# makefile (from '../../common/Makefile.common', line 261)
+LDFLAGS = -m64 -L$(LIBSSMEM)/lib -lssmem_x86_64$(SSMEM_SUFFIX) -lpthread -lrt -lm
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/ml
+# environment
+LS_COLORS = 
+# environment
+XDG_SESSION_DESKTOP = xfce
+# environment
+SSH_AUTH_SOCK = /tmp/ssh-o5J1d7fVqOrk/agent.1535
+# automatic
+%F = $(notdir $%)
+# makefile (from '../../common/Makefile.common', line 192)
+CORE_NUM = $(shell nproc)
+# environment
+DISPLAY = :0.0
+# environment
+CONDA_EXE = /home/ml/miniconda3/bin/conda
+# makefile (from '../../common/Makefile.common', line 9)
+URCU_PATH = /home/trigonak/code/urcu 
+# environment
+VSCODE_PIPE_LOGGING = true
+# makefile (from '../../common/Makefile.common', line 12)
+SOLARIS_CC1 = /opt/csw/bin/gcc
+# environment
+PWD = /home/ml/Desktop/ASCYLIB/src/linkedlist-lazy
+# environment
+QT_QPA_PLATFORMTHEME = qt5ct
+# default
+.LOADED := 
+# environment
+XDG_SEAT = seat0
+# environment
+SSH_AGENT_PID = 1614
+# makefile (from 'Makefile', line 12)
+BINS = $(BINDIR)/lb-ll_lazy$(BIN_SUFFIX)$(SUFFIX)
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = XFCE
+# environment
+GTK_MODULES = gail:atk-bridge
+# makefile (from '../../common/Makefile.common', line 6)
+TBB_LIBS = /home/trigonak/code/tbb42_20140122oss/build/linux_intel64_gcc_cc4.8_libc2.17_kernel3.11.0_release
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/ml
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# makefile (from '../../common/Makefile.common', line 107)
+DEFINES = -DTLS
+# environment
+VSCODE_CODE_CACHE_PATH = /home/ml/.config/Code/CachedData/4af164ea3a06f701fe3e89a2bcbb421d2026b68f
+# environment
+LOGNAME = ml
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# makefile (from '../../common/Makefile.common', line 191)
+PLATFORM_NUMA = 0
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XDG_VTNR = 7
+# environment
+CLUTTER_BACKEND = x11
+# makefile (from '../../common/Makefile.common', line 13)
+SOLARIS_CC2 = /usr/sfw/bin/gcc
+# environment
+MAKELEVEL := 0
+# makefile (from '../../common/Makefile.common', line 62)
+LIBAO_INC = $(ROOT)/src/atomic_ops
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 0
+# makefile (from '../../common/Makefile.common', line 52)
+BINDIR = $(ROOT)/bin
+# makefile (from '../../common/Makefile.common', line 15)
+CC = gcc
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-a111728b-70a1-49c3-bd67-ef3dc14bfa4b.sock
+# environment
+COMPIZ_CONFIG_PROFILE = mint
+# environment
+XDG_SESSION_ID = c2
+# environment
+USER = ml
+# makefile
+.DEFAULT_GOAL := all
+# environment
+XDG_CURRENT_DESKTOP = XFCE
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+CONDA_SHLVL = 0
+# default
+MAKE_COMMAND := make
+# makefile (from '../../common/Makefile.common', line 194)
+FREQ_GHZ := 3.700
+# default
+.VARIABLES := 
+# makefile (from '../../common/Makefile.common', line 68)
+LOCK = TAS
+# automatic
+*F = $(notdir $*)
+# environment
+LANGUAGE = en_IN:en
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# makefile (from '../../common/Makefile.common', line 106)
+OS = Linux
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-c4540a08-1.68.0-main.sock
+# environment
+PANEL_GDK_CORE_DEVICE_EVENTS = 0
+# makefile (from '../../common/Makefile.common', line 227)
+ARCH = x86_64
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GDK_BACKEND = x11
+# automatic
++F = $(notdir $+)
+# environment
+QT_ACCESSIBILITY = 1
+# environment
+DEFAULTS_PATH = /usr/share/gconf/xfce.default.path
+# 'override' directive
+.SHELLSTATUS := 0
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# makefile (from '../../common/Makefile.common', line 267)
+TEST_FILE = test_simple.c
+# environment
+LC_ALL = C
+# environment
+CONDA_PYTHON_EXE = /home/ml/miniconda3/bin/python
+# automatic
+^F = $(notdir $^)
+# makefile (from '../../common/Makefile.common', line 230)
+SSPFD = -lsspfd_x86_64
+# default
+SUFFIXES := 
+# environment
+_CE_M = 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# makefile (from '../../common/Makefile.common', line 65)
+LIBSSMEM = $(ROOT)/external
+# default
+.RECIPEPREFIX := 
+# environment
+LANG = C
+# environment
+VSCODE_PID = 19662
+# environment
+_CE_CONDA = 
+# variable set hash-table stats:
+# Load=133/1024=13%, Rehash=0, Collisions=26/383=7%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 54, inode 5375873): 17 files, no impossibilities.
+
+# 17 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+ 
+
+# Files
+
+# Not a target:
+linkedlist-lock.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+../../common/Makefile.common:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-13 11:42:30.122147304
+#  File has been updated.
+#  Successfully updated.
+
+ssalloc.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 23):
+	$(CC) $(CFLAGS) -no-pie -c -o $(BUILDIR)/ssalloc.o $(PROF)/ssalloc.c
+
+all: main
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/20=0%
+
+clh.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 29):
+	$(CC) $(CFLAGS) -no-pie -c -o $(BUILDIR)/clh.o $(PROF)/clh.c
+
+# 'override' directive
+measurements.o: .SHELLSTATUS := 0
+measurements.o:
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := measurements.o
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+# Load=9/32=28%, Rehash=0, Collisions=7/29=24%
+#  recipe to execute (from 'Makefile', line 20):
+	$(CC) $(CFLAGS) -no-pie -c -o $(BUILDIR)/measurements.o $(PROF)/measurements.c
+
+.PHONY: all clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-13 22:18:22.015858123
+#  File has been updated.
+#  Successfully updated.
+
+lazy.o: linkedlist-lock.h linkedlist-lock.o htlock.o clh.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 35):
+	$(CC) $(CFLAGS) -no-pie -c -o $(BUILDIR)/lazy.o lazy.c	 
+
+# Not a target:
+intset.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+linkedlist-lock.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 32):
+	$(CC) $(CFLAGS) -no-pie -c -o $(BUILDIR)/linkedlist-lock.o linkedlist-lock.c
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+htlock.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 26):
+	$(CC) $(CFLAGS) -no-pie -c -o $(BUILDIR)/htlock.o $(PROF)/htlock.c
+
+test.o: linkedlist-lock.h lazy.h intset.h
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 41):
+	$(CC) $(CFLAGS) -no-pie -c -o $(BUILDIR)/test.o $(TEST_FILE)
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 47):
+	rm -f $(BINS)
+
+# Not a target:
+lazy.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+main: measurements.o ssalloc.o linkedlist-lock.o lazy.o intset.o test.o htlock.o clh.o
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/20=0%
+#  recipe to execute (from 'Makefile', line 44):
+	$(CC) -no-pie $(CFLAGS) $(BUILDIR)/measurements.o $(BUILDIR)/ssalloc.o $(BUILDIR)/htlock.o $(BUILDIR)/clh.o $(BUILDIR)/linkedlist-lock.o $(BUILDIR)/lazy.o $(BUILDIR)/intset.o $(BUILDIR)/test.o -o $(BINS) $(LDFLAGS) 
+
+intset.o: linkedlist-lock.h lazy.h clh.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 38):
+	$(CC) $(CFLAGS) -no-pie -c -o $(BUILDIR)/intset.o intset.c
+
+# files hash-table stats:
+# Load=19/1024=2%, Rehash=0, Collisions=2/55=4%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 34 / storage = 351 B / avg = 10 B
+# current buf: size = 8162 B / used = 351 B / count = 34 / avg = 10 B
+
+# strcache performance: lookups = 74 / hit rate = 54%
+# hash-table stats:
+# Load=34/8192=0%, Rehash=0, Collisions=5/74=7%
+# Finished Make data base on Mon Jun 13 23:12:50 2022
+
+ 

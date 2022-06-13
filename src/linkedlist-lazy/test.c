@@ -23,6 +23,7 @@
 
 #include "intset.h"
 #include "utils.h"
+#include <stdio.h>    //ADDED BY MADHAVA
 
 __thread unsigned long* seeds;
 int verbose = 0;
@@ -87,7 +88,11 @@ test(void *data)
   init_clh_thread(&clh_local_p);
 #endif
 
-
+//ADDED MADHAVA open file ptrs
+  FILE* insert = fopen("../data/input.txt", "w");
+  // FILE* delete = fopen("../data/delete.txt", "w+");
+  // FILE* update
+//DONE MADHAVA
 
   /* Wait on barrier */
   barrier_cross(d->barrier);
@@ -101,9 +106,11 @@ test(void *data)
       if (unext) { // update
 				
 	if (last < 0) { // add
-					
+
+
 	  val = rand_range_re(&d->seed, d->range);
 	  if (set_add_l(d->set, val, val, TRANSACTIONAL)) {
+      fprintf(insert, "%lld ", val);
 	    d->nb_added++;
 	    last = val;
 	  } 				
