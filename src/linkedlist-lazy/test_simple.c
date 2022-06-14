@@ -251,7 +251,8 @@ test(void* thread)
   putting_count[ID] += my_putting_count;
   getting_count[ID] += my_getting_count;
   removing_count[ID]+= my_removing_count;
-
+ -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -no-pie -c -o ../../build/intset.o intset.c
+cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m6
   putting_count_succ[ID] += my_putting_count_succ;
   getting_count_succ[ID] += my_getting_count_succ;
   removing_count_succ[ID]+= my_removing_count_succ;
