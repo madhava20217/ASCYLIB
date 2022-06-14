@@ -79,6 +79,7 @@ test(void *data)
   ssalloc_init();
   PF_CORRECTION;
 
+  printf("**********************************************\nSEED: %u\n************************************", d->seed);
   seeds = seed_rand();
 
 #if defined(HTICKET)
