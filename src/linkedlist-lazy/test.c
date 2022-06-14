@@ -99,69 +99,75 @@ test(void *data)
   while (*running)
     {
       if (unext) { // update
+                
+          if (last < 0) { // add
+                  
+            val = rand_range_re(&d->seed, d->range);
+            if (set_add_l(d->set, val, val)) {
+              d->nb_added++;
+              last = val;
+            } 				
+            d->nb_add++;
+                  
+          } 
+          else { // remove
+                  
+              if (d->alternate) { // alternate mode
+                      
+                if (set_remove_l(d->set, last)) {
+                  d->nb_removed++;
+                }
+                last = -1;
+                      
+              } 
+            else {
+                  
+              val = rand_range_re(&d->seed, d->range);
+              if (set_remove_l(d->set, val)) {
+                d->nb_removed++;
+                last = -1;
+              } 
+                  
+            }
+            d->nb_remove++;
+          }
 				
-	if (last < 0) { // add
-					
-	  val = rand_range_re(&d->seed, d->range);
-	  if (set_add_l(d->set, val, val)) {
-	    d->nb_added++;
-	    last = val;
-	  } 				
-	  d->nb_add++;
-					
-	} else { // remove
-					
-	  if (d->alternate) { // alternate mode
-						
-	    if (set_remove_l(d->set, last)) {
-	      d->nb_removed++;
-	    }
-	    last = -1;
-						
-	  } else {
-					
-	    val = rand_range_re(&d->seed, d->range);
-	    if (set_remove_l(d->set, val)) {
-	      d->nb_removed++;
-	      last = -1;
-	    } 
-					
-	  }
-	  d->nb_remove++;
-	}
+      } 
+      else { // read
 				
-      } else { // read
-				
-	if (d->alternate) {
-	  if (d->update == 0) {
-	    if (last < 0) {
-	      val = d->first;
-	      last = val;
-	    } else { // last >= 0
-	      val = rand_range_re(&d->seed, d->range);
-	      last = -1;
-	    }
-	  } else { // update != 0
-	    if (last < 0) {
-	      val = rand_range_re(&d->seed, d->range);
-	      //last = val;
-	    } else {
-	      val = last;
-	    }
-	  }
-	}	else val = rand_range_re(&d->seed, d->range);
-				
-	if (set_contains_l(d->set, val)) 
-	  d->nb_found++;
-	d->nb_contains++;			
+        if (d->alternate) {
+              if (d->update == 0) {
+                    if (last < 0) {
+                      val = d->first;
+                      last = val;
+                    } 
+                    else { // last >= 0
+                      val = rand_range_re(&d->seed, d->range);
+                      last = -1;
+                    }
+              } 
+              else { // update != 0
+                    if (last < 0) {
+                      val = rand_range_re(&d->seed, d->range);
+                      //last = val;
+                    } 
+                    else {
+                      val = last;
+                    }
+              }
+        }	
+        else val = rand_range_re(&d->seed, d->range);
+              
+      if (set_contains_l(d->set, val)) d->nb_found++;
+        d->nb_contains++;			
       }
 			
       /* Is the next op an update? */
       if (d->effective) { // a failed remove/add is a read-only tx
-	unext = ((100 * (d->nb_added + d->nb_removed))
-		 < (d->update * (d->nb_add + d->nb_remove + d->nb_contains)));
-      } else { // remove/add (even failed) is considered an update
-	unext = (rand_range_re(&d->seed, 100) - 1 < d->update);
+	      unext = ((100 * (d->nb_added + d->nb_removed)) < (d->update * (d->nb_add + d->nb_remove + d->nb_contains)));
+      } 
+      else { // remove/add (even failed) is considered an update
+	      unext = (rand_range_re(&d->seed, 100) - 1 < d->update);
       }
 			
     }	
@@ -356,6 +362,8 @@ main(int argc, char **argv)
 	
   set = set_new_l();
 	
+  FILE* input_vals = fopen("../data/input-test-old.txt", "w");
+
   /* stop = 0; */
   *running = 1;
 	
@@ -364,31 +372,32 @@ main(int argc, char **argv)
   size_t ten_perc = initial / 10, tens = 1;
   size_t ten_perc_nxt = ten_perc;
   /* Populate set */
-  printf("Adding %d entries to set\n", initial);
+  printf("Adding %d entries to set\n", initial);                // this is where we have to insert the values / read them from disk!
   if (initial < 10000)
     {
       i = 0;
       while (i < initial) 
-	{
-	  val = rand_range(range);
-	  if (set_add_l(set, val, val)) 
-	    {
-	      if (i == ten_perc_nxt)
-		{
-		  printf("%02lu%%  ", tens * 10); fflush(stdout);
-		  tens++;
-		  ten_perc_nxt = tens * ten_perc;
-		}
-	      i++;
-	    }
-	}
+      {
+        val = rand_range(range);                                    //MORE SPECIFIC PLACE FOR READING
+        fprintf(input_vals, "%ld ", val);                           //PRINTING TO FILE
+        if (set_add_l(set, val, val)) 
+              {
+                if (i == ten_perc_nxt)
+                {
+                  printf("%02lu%%  ", tens * 10); fflush(stdout);
+                  tens++;
+                  ten_perc_nxt = tens * ten_perc;
+                }
+                i++;
+          }
+      }
     }
   else
     {
-      for (i = initial; i > 0; i--)
-	{
-	  set_add_l(set, i, i);
-	}
+        for (i = initial; i > 0; i--)
+            {
+              set_add_l(set, i, i);
+            }
     }
   printf("\n");
   size = set_size_l(set);
