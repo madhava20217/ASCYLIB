@@ -103,7 +103,7 @@ test(void *data)
 	if (last < 0) { // add
 					
 	  val = rand_range_re(&d->seed, d->range);
-	  if (set_add_l(d->set, val, val, TRANSACTIONAL)) {
+	  if (set_add_l(d->set, val, val)) {
 	    d->nb_added++;
 	    last = val;
 	  } 				
@@ -113,7 +113,7 @@ test(void *data)
 					
 	  if (d->alternate) { // alternate mode
 						
-	    if (set_remove_l(d->set, last, TRANSACTIONAL)) {
+	    if (set_remove_l(d->set, last)) {
 	      d->nb_removed++;
 	    }
 	    last = -1;
@@ -121,7 +121,7 @@ test(void *data)
 	  } else {
 					
 	    val = rand_range_re(&d->seed, d->range);
-	    if (set_remove_l(d->set, val, TRANSACTIONAL)) {
+	    if (set_remove_l(d->set, val)) {
 	      d->nb_removed++;
 	      last = -1;
 	    } 
@@ -151,7 +151,7 @@ test(void *data)
 	  }
 	}	else val = rand_range_re(&d->seed, d->range);
 				
-	if (set_contains_l(d->set, val, TRANSACTIONAL)) 
+	if (set_contains_l(d->set, val)) 
 	  d->nb_found++;
 	d->nb_contains++;			
       }
@@ -371,7 +371,7 @@ main(int argc, char **argv)
       while (i < initial) 
 	{
 	  val = rand_range(range);
-	  if (set_add_l(set, val, val, 0)) 
+	  if (set_add_l(set, val, val)) 
 	    {
 	      if (i == ten_perc_nxt)
 		{
@@ -387,7 +387,7 @@ main(int argc, char **argv)
     {
       for (i = initial; i > 0; i--)
 	{
-	  set_add_l(set, i, i, 0);
+	  set_add_l(set, i, i);
 	}
     }
   printf("\n");
