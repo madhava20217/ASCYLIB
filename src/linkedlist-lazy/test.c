@@ -24,6 +24,14 @@
 #include "intset.h"
 #include "utils.h"
 
+//MODIFIED PART BY MADHAVA
+#define SIZE 1000000                      //size of the arrays, number of values, change if number of values change
+#define INIT_PATH   "../data/init.csv"    //path for searching for 'initialised' values
+#define UPDATE_PATH "../data/update.csv"  //path for searching for 'updating' values
+#define DELETE_PATH "../data/delete.csv"  //path for searching for 'delete' values
+#define SEARCH_PATH "../data/search.csv"  //path for searching for 'search' values
+//END OF MODIFIED PART BY MADHAVA
+
 __thread unsigned long* seeds;
 int verbose = 0;
 
@@ -363,7 +371,25 @@ main(int argc, char **argv)
 	
   set = set_new_l();
 	
-  FILE* input_vals = fopen("../data/input-test-old.txt", "w");
+  //MODIFIED PART BY MADHAVA
+  FILE* init_vals   = fopen(INIT_PATH  , "r");
+  FILE* update_vals = fopen(UPDATE_PATH, "r");
+  FILE* delete_vals = fopen(DELETE_PATH, "r");
+  FILE* search_vals = fopen(SEARCH_PATH, "r");
+
+  int* init_data   = (int*) malloc(sizeof(int) *SIZE);
+  int* update_data = (int*) malloc(sizeof(int) *SIZE);
+  int* delete_data = (int*) malloc(sizeof(int) *SIZE);
+  int* search_data = (int*) malloc(sizeof(int) *SIZE);
+
+  for(int i = 0; i <= SIZE; i++){
+    fscan(init_vals,   " %d", init_data   +i);
+    fscan(update_vals, " %d", update_data +i);
+    fscan(delete_vals, " %d", delete_data +i);
+    fscan(search_vals, " %d", search_data +i);
+  }
+  //END OF MODIFIED PART BY MADHAVA
+
 
   /* stop = 0; */
   *running = 1;
@@ -380,7 +406,6 @@ main(int argc, char **argv)
       while (i < initial) 
       {
         val = rand_range(range);                                    //MORE SPECIFIC PLACE FOR READING
-        fprintf(input_vals, "%ld ", val);                           //PRINTING TO FILE
         if (set_add_l(set, val, val)) 
               {
                 if (i == ten_perc_nxt)
