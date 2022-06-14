@@ -8,6 +8,7 @@ make -C src/linkedlist-harris
  
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
+ 
 ********************************** If incorrect, create a manual entry in common/Makefile.common
  
 # GNU Make 4.2.1
@@ -18,7 +19,7 @@ make -C src/linkedlist-harris
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Tue Jun 14 14:26:39 2022
+# Make data base, printed on Tue Jun 14 16:08:27 2022
 
 # Variables
 
@@ -94,6 +95,7 @@ XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
 PATH = /home/ml/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+ 
 # makefile (from '../../common/Makefile.common', line 96)
 OS_NAME = $(shell uname -s)
 # makefile (from '../../common/Makefile.common', line 125)
@@ -133,7 +135,6 @@ SSH_AUTH_SOCK = /tmp/ssh-iCm3mkTwvo6W/agent.2577
 # automatic
 %F = $(notdir $%)
 # makefile (from '../../common/Makefile.common', line 192)
- 
 CORE_NUM = $(shell nproc)
 # environment
 DISPLAY = :0.0
@@ -194,6 +195,7 @@ CLUTTER_BACKEND = x11
 # makefile (from '../../common/Makefile.common', line 13)
 SOLARIS_CC2 = /usr/sfw/bin/gcc
 # environment
+ 
 MAKELEVEL := 2
 # makefile (from '../../common/Makefile.common', line 62)
 LIBAO_INC = $(ROOT)/src/atomic_ops
@@ -208,7 +210,7 @@ CC = gcc
 # environment
 MAKEOVERRIDES = ${-*-command-variables-*-}
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-17e5d10d-a753-41ac-b544-ce25495d0d4b.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e1a14190-1529-4935-adda-d3917ae4848e.sock
 # environment
 COMPIZ_CONFIG_PROFILE = mint
 # environment
@@ -296,7 +298,6 @@ VSCODE_PID = 3752
 # environment
 _CE_CONDA = 
 # variable set hash-table stats:
- 
 # Load=136/1024=13%, Rehash=0, Collisions=29/387=7%
 
 # Pattern-specific Variable Values
@@ -326,6 +327,7 @@ ssalloc.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+ 
 #  recipe to execute (from 'Makefile', line 18):
 	$(CC) $(CFLAGS) -c -o $(BUILDIR)/ssalloc.o $(PROF)/ssalloc.c
 
@@ -415,7 +417,6 @@ harris.h:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
- 
 
 linkedlist.o:
 #  Implicit rule search has not been done.
@@ -447,6 +448,7 @@ intset.o: linkedlist.h harris.h
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 27):
+ 
 	$(CC) $(CFLAGS) -c -o $(BUILDIR)/intset.o intset.c
 
 harris.o: linkedlist.h linkedlist.o
@@ -470,7 +472,7 @@ harris.o: linkedlist.h linkedlist.o
 # strcache performance: lookups = 61 / hit rate = 52%
 # hash-table stats:
 # Load=29/8192=0%, Rehash=0, Collisions=1/61=2%
-# Finished Make data base on Tue Jun 14 14:26:39 2022
+# Finished Make data base on Tue Jun 14 16:08:27 2022
 
 # make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/linkedlist-harris'
  
@@ -482,7 +484,7 @@ harris.o: linkedlist.h linkedlist.o
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Tue Jun 14 14:26:39 2022
+# Make data base, printed on Tue Jun 14 16:08:27 2022
 
 # Variables
 
@@ -519,7 +521,6 @@ CURDIR := /home/ml/Desktop/ASCYLIB
 # makefile
 SHELL = /bin/sh
 # environment
- 
 GDM_LANG = en_US
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
@@ -552,6 +553,7 @@ LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 VSCODE_CWD = /home/ml
 # environment
+ 
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
@@ -582,7 +584,6 @@ STM = LOCKFREE
 # environment
 XDG_SESSION_DESKTOP = xfce
 # environment
- 
 SSH_AUTH_SOCK = /tmp/ssh-iCm3mkTwvo6W/agent.2577
 # automatic
 %F = $(notdir $%)
@@ -641,7 +642,7 @@ SHLVL = 0
 # environment
 MAKEOVERRIDES = ${-*-command-variables-*-}
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-17e5d10d-a753-41ac-b544-ce25495d0d4b.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e1a14190-1529-4935-adda-d3917ae4848e.sock
 # environment
 COMPIZ_CONFIG_PROFILE = mint
 # environment
@@ -683,11 +684,11 @@ NOISE = src/noise
 # environment
 GDK_BACKEND = x11
 # automatic
- 
 -*-command-variables-*- := STM=LOCKFREE
 # environment
 QT_ACCESSIBILITY = 1
 # environment
+ 
 DEFAULTS_PATH = /usr/share/gconf/xfce.default.path
 # default
 MAKEFILES := 
@@ -724,9 +725,9 @@ _CE_CONDA =
 
 # Directories
 
-# . (device 53, inode 5374807): 18 files, no impossibilities.
+# . (device 53, inode 5374807): 19 files, no impossibilities.
 
-# 18 files, no impossibilities in 1 directories.
+# 19 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -792,7 +793,6 @@ src/skiplist-optik1:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 454):
 	$(MAKE) -C $@ $(TARGET)
- 
 
 seqbstint:
 #  Implicit rule search has not been done.
@@ -824,6 +824,7 @@ optik_test2:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 104):
 	$(MAKE) "OPTIK=2" "OPTIK_STATS=1" src/optik_test
+ 
 
 seqhtgc:
 #  Implicit rule search has not been done.
@@ -897,7 +898,6 @@ src/linkedlist-harris:
 # + := 
 # automatic
 # | := 
- 
 # automatic
 # < := 
 # automatic
@@ -962,6 +962,7 @@ htcopy_no_ro:
 #  recipe to execute (from 'Makefile', line 315):
 	$(MAKE) "RO_FAIL=0" src/hashtable-copy
 
+ 
 .PHONY: all clean all external src/bst-aravind src/bst-bronson src/bst-drachsler src/bst-ellen src/bst-howley src/bst-seq_internal src/bst-tk src/hashtable-copy src/hashtable-coupling src/hashtable-harris src/hashtable-java src/hashtable-java_optik src/hashtable-lazy src/hashtable-optik0 src/hashtable-optik1 src/hashtable-map_optik src/hashtable-pugh src/hashtable-rcu src/hashtable-seq src/hashtable-tbb src/linkedlist-copy src/linkedlist-coupling src/linkedlist-gl_opt src/linkedlist-harris src/linkedlist-harris_opt src/linkedlist-lazy src/linkedlist-lazy_sp src/linkedlist-lazy_orig src/linkedlist-lazy_cache src/linkedlist-optik src/linkedlist-optik_gl src/linkedlist-optik_cache src/linkedlist-michael src/linkedlist-pugh src/linkedlist-seq src/noise src/skiplist-fraser src/skiplist-herlihy_lb src/skiplist-optik src/skiplist-optik1 src/skiplist-optik2 src/skiplist-herlihy_lf src/skiplist-pugh src/skiplist-seq src/priorityqueue-alistarh src/priorityqueue-lotanshavit_lf src/priorityqueue-alistarh-herlihyBased src/priorityqueue-alistarh-pughBased src/queue-ms_lb src/queue-ms_hybrid src/queue-ms_lf src/queue-optik0 src/queue-optik1 src/queue-optik2 src/queue-optik2a src/queue-optik3 src/queue-optik4 src/queue-optik5 src/stack-treiber src/stack-lock src/stack-optik src/stack-optik1 src/stack-optik2 src/map-lock src/map-optik src/linkedlist-coupling src/linkedlist-gl_opt src/linkedlist-lazy src/linkedlist-lazy_sp src/linkedlist-lazy_orig src/linkedlist-lazy_cache src/linkedlist-optik src/linkedlist-optik_gl src/linkedlist-optik_cache src/linkedlist-pugh src/linkedlist-copy src/hashtable-pugh src/hashtable-coupling src/hashtable-lazy src/hashtable-optik0 src/hashtable-optik1 src/hashtable-map_optik src/hashtable-java src/hashtable-java_optik src/hashtable-copy src/skiplist-herlihy_lb src/skiplist-optik src/skiplist-optik1 src/skiplist-optik2 src/skiplist-pugh src/bst-bronson src/bst-drachsler src/bst-tk/ src/priorityqueue-alistarh-pughBased src/queue-ms_lb src/queue-ms_hybrid src/queue-optik0 src/queue-optik1 src/queue-optik2 src/queue-optik2a src/queue-optik3 src/queue-optik4 src/queue-optik5 src/stack-lock src/stack-optik src/stack-optik1 src/stack-optik2 src/map-lock src/map-optik src/noise src/tests src/optik_test src/linkedlist-seq src/hashtable-seq src/skiplist-seq src/bst-seq_internal src/bst-seq_external
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -983,7 +984,6 @@ lbll_optik_gl:
 #  recipe to execute (from 'Makefile', line 303):
 	$(MAKE) src/linkedlist-optik_gl
 
- 
 lbsl_optik:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -1097,7 +1097,6 @@ ht: seqht lfht lbht htjava htjava_optik tbb htcopy htrcu lbht_coupling lbht_lazy
 #  File has not been updated.
 
 src/skiplist-fraser:
- 
 #  Phony target (prerequisite of .PHONY).
 #  Command line target.
 #  Implicit rule search has not been done.
@@ -1109,6 +1108,7 @@ src/skiplist-fraser:
 spin:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+ 
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 24):
 	$(MAKE) "LOCK=SPIN" $(LBENCHS)
@@ -1203,7 +1203,6 @@ otppopp: optik_test0 optik_test1 optik_test2
 #  Modification time never checked.
 #  File has not been updated.
 
- 
 src/linkedlist-michael:
 #  Phony target (prerequisite of .PHONY).
 #  Command line target.
@@ -1273,6 +1272,7 @@ lbqu_ms_hybrid:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 146):
+ 
 	$(MAKE) "LOCK=MCS" src/queue-ms_hybrid
 
 lbht_optik1:
@@ -1327,7 +1327,6 @@ lfsl_herlihy_lf:
 lbll_optik:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 291):
 	$(MAKE) src/linkedlist-optik
@@ -1451,6 +1450,7 @@ src/linkedlist-copy:
 	$(MAKE) -C $@ $(TARGET)
 
 tests:
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -1471,7 +1471,6 @@ external:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
- 
 #  recipe to execute (from 'Makefile', line 357):
 	$(MAKE) "STM=LOCKFREE" $(EXTERNALS)
 
@@ -1600,7 +1599,6 @@ src/skiplist-herlihy_lb:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 454):
 	$(MAKE) -C $@ $(TARGET)
- 
 
 # Not a target:
 .DEFAULT:
@@ -1613,6 +1611,7 @@ lbht_optik1_gl:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 239):
+ 
 	$(MAKE) "G=GL" src/hashtable-optik1
 
 lbll_lazy_sp:
@@ -1738,7 +1737,6 @@ seqbstext:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 346):
 	$(MAKE) "STM=SEQUENTIAL" "SEQ_NO_FREE=1" src/bst-seq_external
- 
 
 src/hashtable-seq:
 #  Phony target (prerequisite of .PHONY).
@@ -1790,6 +1788,7 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
+ 
 #  recipe to execute (from 'Makefile', line 382):
 	$(MAKE) -C src/bst-aravind clean
 	$(MAKE) -C src/bst-bronson clean
@@ -1858,7 +1857,6 @@ clean:
 	$(MAKE) -C src/priorityqueue-lotanshavit_lf clean
 	$(MAKE) -C src/tests clean
 	rm -rf build
- 
 
 src/hashtable-rcu:
 #  Phony target (prerequisite of .PHONY).
@@ -1960,6 +1958,7 @@ src/linkedlist-lazy_orig:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
+ 
 #  recipe to execute (from 'Makefile', line 454):
 	$(MAKE) -C $@ $(TARGET)
 
@@ -1999,7 +1998,6 @@ lockfree:
 #  recipe to execute (from 'Makefile', line 86):
 	$(MAKE) "STM=LOCKFREE" $(LFBENCHS)
 
- 
 seqht:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -2144,6 +2142,7 @@ htjava:
 #  recipe to execute (from 'Makefile', line 324):
 	$(MAKE) src/hashtable-java
 
+ 
 src/bst-tk:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
@@ -2285,7 +2284,6 @@ lfht:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 321):
- 
 	$(MAKE) "STM=LOCKFREE" src/hashtable-harris
 
 lfll: lfll_harris lfll_michael lfll_harris_opt
@@ -2301,13 +2299,14 @@ lfll: lfll_harris lfll_michael lfll_harris_opt
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 222 / storage = 2900 B / avg = 13 B
-# current buf: size = 8162 B / used = 2900 B / count = 222 / avg = 13 B
+# strcache buffers: 1 (0) / strings = 223 / storage = 2917 B / avg = 13 B
+# current buf: size = 8162 B / used = 2917 B / count = 223 / avg = 13 B
 
-# strcache performance: lookups = 715 / hit rate = 68%
+# strcache performance: lookups = 716 / hit rate = 68%
 # hash-table stats:
-# Load=222/8192=3%, Rehash=0, Collisions=18/715=3%
-# Finished Make data base on Tue Jun 14 14:26:39 2022
+ 
+# Load=223/8192=3%, Rehash=0, Collisions=18/716=3%
+# Finished Make data base on Tue Jun 14 16:08:27 2022
 
 # make[1]: Leaving directory '/home/ml/Desktop/ASCYLIB'
  
@@ -2317,8 +2316,9 @@ lfll: lfll_harris lfll_michael lfll_harris_opt
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Tue Jun 14 14:26:39 2022
+# Make data base, printed on Tue Jun 14 16:08:27 2022
 
 # Variables
 
@@ -2372,6 +2372,7 @@ MAKEFILE_LIST :=  Makefile
 @F = $(notdir $@)
 # 'override' directive
 GNUMAKEFLAGS := 
+ 
 # environment
 MANDATORY_PATH = /usr/share/gconf/xfce.mandatory.path
 # environment
@@ -2469,7 +2470,7 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 0
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-17e5d10d-a753-41ac-b544-ce25495d0d4b.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e1a14190-1529-4935-adda-d3917ae4848e.sock
 # environment
 COMPIZ_CONFIG_PROFILE = mint
 # environment
@@ -2481,6 +2482,7 @@ USER = ml
 # environment
 XDG_CURRENT_DESKTOP = XFCE
 # automatic
+ 
 %D = $(patsubst %/,%,$(dir $%))
 # environment
 CONDA_SHLVL = 0
@@ -2551,9 +2553,9 @@ _CE_CONDA =
 
 # Directories
 
-# . (device 53, inode 5374807): 18 files, no impossibilities.
+# . (device 53, inode 5374807): 19 files, no impossibilities.
 
-# 18 files, no impossibilities in 1 directories.
+# 19 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -2584,6 +2586,7 @@ sequential:
 #  recipe to execute (from 'Makefile', line 65):
 	$(MAKE) "STM=SEQUENTIAL" "SEQ_NO_FREE=1" $(SEQBENCHS)
 
+ 
 sl: seqsl lfsl_fraser lfsl_herlihy_lf lbsl_pugh lbsl_herlihy_lb lbsl_optik lbsl_optik1 lbsl_optik2
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -2613,7 +2616,6 @@ src/hashtable-tbb:
 	$(MAKE) -C $@ $(TARGET)
 
 src/skiplist-optik1:
- 
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -2698,6 +2700,7 @@ quppopp: lbqu_ms lfqu_ms lbqu_optik0 lbqu_optik1 lbqu_optik2 lbqu_optik3
 #  Modification time never checked.
 #  File has not been updated.
 
+ 
 htjava_optik:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -2757,7 +2760,6 @@ lbqu_ms:
 #  recipe to execute (from 'Makefile', line 143):
 	$(MAKE) "LOCK=MCS" src/queue-ms_lb
 
- 
 bstppopp: bst_aravind bst_bronson bst_tk
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -2770,6 +2772,7 @@ htcopy_no_ro:
 #  recipe to execute (from 'Makefile', line 315):
 	$(MAKE) "RO_FAIL=0" src/hashtable-copy
 
+ 
 .PHONY: all clean all external src/bst-aravind src/bst-bronson src/bst-drachsler src/bst-ellen src/bst-howley src/bst-seq_internal src/bst-tk src/hashtable-copy src/hashtable-coupling src/hashtable-harris src/hashtable-java src/hashtable-java_optik src/hashtable-lazy src/hashtable-optik0 src/hashtable-optik1 src/hashtable-map_optik src/hashtable-pugh src/hashtable-rcu src/hashtable-seq src/hashtable-tbb src/linkedlist-copy src/linkedlist-coupling src/linkedlist-gl_opt src/linkedlist-harris src/linkedlist-harris_opt src/linkedlist-lazy src/linkedlist-lazy_sp src/linkedlist-lazy_orig src/linkedlist-lazy_cache src/linkedlist-optik src/linkedlist-optik_gl src/linkedlist-optik_cache src/linkedlist-michael src/linkedlist-pugh src/linkedlist-seq src/noise src/skiplist-fraser src/skiplist-herlihy_lb src/skiplist-optik src/skiplist-optik1 src/skiplist-optik2 src/skiplist-herlihy_lf src/skiplist-pugh src/skiplist-seq src/priorityqueue-alistarh src/priorityqueue-lotanshavit_lf src/priorityqueue-alistarh-herlihyBased src/priorityqueue-alistarh-pughBased src/queue-ms_lb src/queue-ms_hybrid src/queue-ms_lf src/queue-optik0 src/queue-optik1 src/queue-optik2 src/queue-optik2a src/queue-optik3 src/queue-optik4 src/queue-optik5 src/stack-treiber src/stack-lock src/stack-optik src/stack-optik1 src/stack-optik2 src/map-lock src/map-optik src/linkedlist-coupling src/linkedlist-gl_opt src/linkedlist-lazy src/linkedlist-lazy_sp src/linkedlist-lazy_orig src/linkedlist-lazy_cache src/linkedlist-optik src/linkedlist-optik_gl src/linkedlist-optik_cache src/linkedlist-pugh src/linkedlist-copy src/hashtable-pugh src/hashtable-coupling src/hashtable-lazy src/hashtable-optik0 src/hashtable-optik1 src/hashtable-map_optik src/hashtable-java src/hashtable-java_optik src/hashtable-copy src/skiplist-herlihy_lb src/skiplist-optik src/skiplist-optik1 src/skiplist-optik2 src/skiplist-pugh src/bst-bronson src/bst-drachsler src/bst-tk/ src/priorityqueue-alistarh-pughBased src/queue-ms_lb src/queue-ms_hybrid src/queue-optik0 src/queue-optik1 src/queue-optik2 src/queue-optik2a src/queue-optik3 src/queue-optik4 src/queue-optik5 src/stack-lock src/stack-optik src/stack-optik1 src/stack-optik2 src/map-lock src/map-optik src/noise src/tests src/optik_test src/linkedlist-seq src/hashtable-seq src/skiplist-seq src/bst-seq_internal src/bst-seq_external
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -2835,7 +2838,6 @@ htrcu:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
- 
 #  recipe to execute (from 'Makefile', line 333):
 	$(MAKE) "GC=0" src/hashtable-rcu
 
@@ -2870,6 +2872,7 @@ src/hashtable-coupling:
 	$(MAKE) -C $@ $(TARGET)
 
 seqllgc:
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -2991,6 +2994,7 @@ lfll_harris:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
+ 
 #  Last modified 2022-06-13 11:42:30.122147304
 #  File has been updated.
 #  Successfully updated.
@@ -3107,6 +3111,7 @@ src/noise:
 seqsl:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+ 
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 80):
 	$(MAKE) "STM=SEQUENTIAL" "SEQ_NO_FREE=1" src/skiplist-seq
@@ -3120,7 +3125,6 @@ src/stack-optik1:
 	$(MAKE) -C $@ $(TARGET)
 
 lfsl_herlihy_lf:
- 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -3219,6 +3223,7 @@ src/queue-optik0:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
+ 
 #  recipe to execute (from 'Makefile', line 454):
 	$(MAKE) -C $@ $(TARGET)
 
@@ -3331,6 +3336,7 @@ noise:
 	$(MAKE) $(NOISE)
 
 lbht_pugh_gl:
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -3407,7 +3413,6 @@ src/skiplist-herlihy_lb:
 #  Modification time never checked.
 #  File has not been updated.
 
- 
 lbht_optik1_gl:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -3438,6 +3443,7 @@ lbht_coupling_gl:
 
 src/bst-drachsler:
 #  Phony target (prerequisite of .PHONY).
+ 
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
@@ -3504,7 +3510,6 @@ lbll_pugh_no_ro:
 
 src/queue-ms_hybrid:
 #  Phony target (prerequisite of .PHONY).
- 
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
@@ -3536,6 +3541,7 @@ seqbstext:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 346):
+ 
 	$(MAKE) "STM=SEQUENTIAL" "SEQ_NO_FREE=1" src/bst-seq_external
 
 src/hashtable-seq:
@@ -3570,7 +3576,6 @@ src/linkedlist-coupling:
 
 bst: seqbstint seqbstext
 #  Implicit rule search has not been done.
- 
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 39):
@@ -3622,7 +3627,6 @@ clean:
 	$(MAKE) -C src/linkedlist-lazy_cache clean
 	$(MAKE) -C src/linkedlist-optik clean
 	$(MAKE) -C src/linkedlist-optik_cache clean
- 
 	$(MAKE) -C src/linkedlist-michael clean
 	$(MAKE) -C src/linkedlist-pugh clean
 	$(MAKE) -C src/linkedlist-seq clean
@@ -3644,6 +3648,7 @@ clean:
 	$(MAKE) -C src/queue-optik2a clean
 	$(MAKE) -C src/queue-optik3 clean
 	$(MAKE) -C src/queue-optik4 clean
+ 
 	$(MAKE) -C src/queue-optik5 clean
 	$(MAKE) -C src/stack-treiber clean
 	$(MAKE) -C src/stack-lock clean
@@ -3683,7 +3688,6 @@ lbmap_optik:
 	$(MAKE) src/map-optik
 
 ll: seqll lfll llcopy lbll_coupling lbll_gl lbll_pugh lbll_lazy lbll_lazy_no_ro lbll_optik lbll_optik_no_ro llcopy_no_ro lbll_pugh_no_ro
- 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -3823,7 +3827,6 @@ seqht:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 74):
- 
 	$(MAKE) "STM=SEQUENTIAL" "SEQ_NO_FREE=1" src/hashtable-seq
 
 src/bst-seq_internal:
@@ -3869,7 +3872,6 @@ optik_test1:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 101):
- 
 	$(MAKE) "OPTIK=1" "OPTIK_STATS=1" src/optik_test
 
 src/bst-tk/:
@@ -3880,6 +3882,7 @@ src/bst-tk/:
 #  recipe to execute (from 'Makefile', line 454):
 	$(MAKE) -C $@ $(TARGET)
 
+ 
 src/linkedlist-optik:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
@@ -3926,7 +3929,6 @@ lbht_lazy:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
- 
 #  recipe to execute (from 'Makefile', line 227):
 	$(MAKE) src/hashtable-lazy
 
@@ -3976,7 +3978,6 @@ seqll:
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 204):
- 
 	$(MAKE) "STM=SEQUENTIAL" "SEQ_NO_FREE=1" src/linkedlist-seq
 
 src/linkedlist-pugh:
@@ -3992,6 +3993,7 @@ src/queue-optik2a:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
+ 
 #  recipe to execute (from 'Makefile', line 454):
 	$(MAKE) -C $@ $(TARGET)
 
@@ -4021,7 +4023,6 @@ src/skiplist-herlihy_lf:
 	$(MAKE) -C $@ $(TARGET)
 
 tbb:
- 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -4078,7 +4079,6 @@ optik: lbll_optik lbht_optik0 lbht_optik0_gl lbht_optik1 lbht_optik1_gl
 #  File has not been updated.
 
 src/bst-ellen:
- 
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -4088,6 +4088,7 @@ src/bst-ellen:
 
 lbll_lazy_no_ro:
 #  Implicit rule search has not been done.
+ 
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 285):
@@ -4121,13 +4122,12 @@ lfll: lfll_harris lfll_michael lfll_harris_opt
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 222 / storage = 2900 B / avg = 13 B
-# current buf: size = 8162 B / used = 2900 B / count = 222 / avg = 13 B
- 
+# strcache buffers: 1 (0) / strings = 223 / storage = 2917 B / avg = 13 B
+# current buf: size = 8162 B / used = 2917 B / count = 223 / avg = 13 B
 
-# strcache performance: lookups = 689 / hit rate = 67%
+# strcache performance: lookups = 690 / hit rate = 67%
 # hash-table stats:
-# Load=222/8192=3%, Rehash=0, Collisions=18/689=3%
-# Finished Make data base on Tue Jun 14 14:26:39 2022
+# Load=223/8192=3%, Rehash=0, Collisions=18/690=3%
+# Finished Make data base on Tue Jun 14 16:08:27 2022
 
  

@@ -7,6 +7,7 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/linkedlist-harris'
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
+ 
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/linkedlist.o linkedlist.c
@@ -17,6 +18,7 @@ cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -W
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/linkedlist-harris'
 make -C src/linkedlist-harris_opt 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/linkedlist-harris_opt'
+ 
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
@@ -35,10 +37,8 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/linkedlist-michael'
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
- 
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/linkedlist.o linkedlist.c
- 
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/michael.o michael.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/intset.o intset.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/test.o test_simple.c
@@ -46,10 +46,10 @@ cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -W
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/linkedlist-michael'
 make -C src/hashtable-harris 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/hashtable-harris'
+ 
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
- 
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/linkedlist.o lists/linkedlist.c
@@ -75,7 +75,6 @@ cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -W
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/skiplist-fraser'
 make -C src/skiplist-herlihy_lf 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/skiplist-herlihy_lf'
- 
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
@@ -89,11 +88,9 @@ cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -W
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/skiplist-herlihy_lf'
 make -C src/bst-ellen 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/bst-ellen'
- 
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
- 
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/bst_ellen.o bst_ellen.c
@@ -140,6 +137,7 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/priorityqueue-lotansha
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
+ 
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/skiplist.o skiplist.c
@@ -149,13 +147,16 @@ cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -W
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 ../../build/measurements.o ../../build/ssalloc.o ../../build/skiplist.o ../../build/lotanshavit_lf.o ../../build/intPriorityQueue.o ../../build/test.o -o ../../bin/lf-pq_lotanshavit -m64 -L../../external/lib -lssmem_x86_64 -lpthread -lrt -lm
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/priorityqueue-lotanshavit_lf'
 make -C src/priorityqueue-alistarh-herlihyBased 
+ 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/priorityqueue-alistarh-herlihyBased'
+ 
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/skiplist.o skiplist.c
+ 
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/alistarh_herlihy.o alistarh_herlihy.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/intPriorityQueue.o intPriorityQueue.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/test.o test_simple.c
@@ -163,14 +164,17 @@ cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -W
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/priorityqueue-alistarh-herlihyBased'
 make -C src/queue-ms_lf 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/queue-ms_lf'
+ 
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
+ 
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/queue-lockfree.o queue-lockfree.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/queue-ms.o queue-ms.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/htlock.o ../../src/htlock.c
+ 
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/clh.o ../../src/clh.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/intset.o intset.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/test.o test_simple.c
@@ -178,9 +182,11 @@ cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -W
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/queue-ms_lf'
 make -C src/stack-treiber 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/stack-treiber'
+ 
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
+ 
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DLOCKFREE -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/stack-lockfree.o stack-lockfree.c
@@ -201,74 +207,53 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/linkedlist-coupling'
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/linkedlist-lock.o linkedlist-lock.c
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/clh.o ../../src/clh.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/coupling.o coupling.c
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/intset.o intset.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/test.o test_simple.c
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/htlock.o ../../src/htlock.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 ../../build/measurements.o ../../build/ssalloc.o ../../build/htlock.o ../../build/clh.o ../../build/linkedlist-lock.o ../../build/coupling.o ../../build/intset.o ../../build/test.o -o ../../bin/lb-ll_coupling -m64 -L../../external/lib -lssmem_x86_64 -lpthread -lrt -lm 
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/linkedlist-coupling'
 make -C src/linkedlist-gl_opt 
-make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/linkedlist-gl_opt'
  
+make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/linkedlist-gl_opt'
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/linkedlist-lock.o linkedlist-lock.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/clh.o ../../src/clh.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/coupling.o coupling.c
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/intset.o intset.c
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/test.o test_simple.c
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/htlock.o ../../src/htlock.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 ../../build/measurements.o ../../build/ssalloc.o ../../build/htlock.o ../../build/clh.o ../../build/linkedlist-lock.o ../../build/coupling.o ../../build/intset.o ../../build/test.o -o ../../bin/lb-ll_gl -m64 -L../../external/lib -lssmem_x86_64 -lpthread -lrt -lm 
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/linkedlist-gl_opt'
 make -C src/linkedlist-lazy 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/linkedlist-lazy'
- 
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -no-pie -c -o ../../build/measurements.o ../../src/measurements.c
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -no-pie -c -o ../../build/ssalloc.o ../../src/ssalloc.c
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -no-pie -c -o ../../build/linkedlist-lock.o linkedlist-lock.c
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -no-pie -c -o ../../build/htlock.o ../../src/htlock.c
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -no-pie -c -o ../../build/clh.o ../../src/clh.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -no-pie -c -o ../../build/lazy.o lazy.c	 
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -no-pie -c -o ../../build/intset.o intset.c
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -no-pie -c -o ../../build/test.o test_simple.c
- 
 cc -no-pie -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 ../../build/measurements.o ../../build/ssalloc.o ../../build/htlock.o ../../build/clh.o ../../build/linkedlist-lock.o ../../build/lazy.o ../../build/intset.o ../../build/test.o -o ../../bin/lb-ll_lazy -m64 -L../../external/lib -lssmem_x86_64 -lpthread -lrt -lm 
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/linkedlist-lazy'
- 
 make -C src/linkedlist-lazy_sp 
- 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/linkedlist-lazy_sp'
- 
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -c -o ../../build/measurements.o ../../src/measurements.c
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -c -o ../../build/linkedlist-lock.o linkedlist-lock.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -c -o ../../build/htlock.o ../../src/htlock.c
@@ -283,7 +268,6 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/linkedlist-lazy_orig'
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/linkedlist-lock.o linkedlist-lock.c
@@ -409,6 +393,7 @@ cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/linkedlist-lock.o lists/linkedlist-lock.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/hashtable-lock.o hashtable-lock.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/test.o test_simple.c
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/htlock.o ../../src/htlock.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1  ../../build/measurements.o ../../build/ssalloc.o ../../build/htlock.o ../../build/clh.o ../../build/intset.o ../../build/coupling.o ../../build/linkedlist-lock.o ../../build/hashtable-lock.o ../../build/test.o -o ../../bin/lb-ht_coupling -m64 -L../../external/lib -lssmem_x86_64 -lpthread -lrt -lm
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/hashtable-coupling'
@@ -434,6 +419,7 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/hashtable-optik0'
 ********************************** If incorrect, create a manual entry in common/Makefile.common
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -c -o ../../build/measurements.o ../../src/measurements.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -c -o ../../build/intset.o lists/intset.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -c -o ../../build/htlock.o ../../src/htlock.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -c -o ../../build/linkedlist-optik.o lists/linkedlist-optik.c      
@@ -444,6 +430,7 @@ cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/hashtable-optik0'
 make -C src/hashtable-optik1 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/hashtable-optik1'
+ 
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
@@ -458,7 +445,6 @@ cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1  ../../build/measurements.o ../../build/ssalloc.o ../../build/htlock.o ../../build/clh.o ../../build/intset.o ../../build/linkedlist-optik.o ../../build/linkedlist-lock.o ../../build/hashtable-lock.o ../../build/test.o -o ../../bin/lb-ht_optik1 -m64 -L../../external/lib -lssmem_x86_64 -lpthread -lrt -lm
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/hashtable-optik1'
 make -C src/hashtable-map_optik 
- 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/hashtable-map_optik'
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
@@ -475,7 +461,6 @@ cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/hashtable-map_optik'
 make -C src/hashtable-java 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/hashtable-java'
- 
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
@@ -500,6 +485,7 @@ cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/hashtable-java_optik'
 make -C src/hashtable-copy 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/hashtable-copy'
+ 
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
@@ -507,7 +493,6 @@ cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -c -o ../../build/htlock.o ../../src/htlock.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -c -o ../../build/clh.o ../../src/clh.c
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -c -o ../../build/copy_on_write.o copy_on_write.c	 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -c -o ../../build/test.o test_simple.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 ../../build/measurements.o ../../build/ssalloc.o ../../build/htlock.o ../../build/clh.o ../../build/copy_on_write.o ../../build/test.o -o ../../bin/lb-ht_copy -m64 -L../../external/lib -lssmem_x86_64 -lpthread -lrt -lm 
@@ -520,7 +505,6 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/skiplist-herlihy_lb'
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/skiplist-lock.o skiplist-lock.c
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/herlihy.o herlihy.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/htlock.o ../../src/htlock.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/clh.o ../../src/clh.c
@@ -533,6 +517,7 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/skiplist-optik'
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/skiplist-lock.o skiplist-lock.c
@@ -545,7 +530,6 @@ cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/skiplist-optik'
 make -C src/skiplist-optik1 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/skiplist-optik1'
- 
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
@@ -561,10 +545,10 @@ cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/skiplist-optik1'
 make -C src/skiplist-optik2 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/skiplist-optik2'
- 
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/skiplist-lock.o skiplist-lock.c
@@ -577,6 +561,7 @@ cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/skiplist-optik2'
 make -C src/skiplist-pugh 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/skiplist-pugh'
+ 
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
@@ -592,21 +577,20 @@ cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 ../../build/measurements.o ../../build/ssalloc.o ../../build/htlock.o ../../build/clh.o ../../build/skiplist-lock.o ../../build/pugh.o ../../build/intset.o ../../build/test.o -o "../../bin/lb-sl"_pugh"" -m64 -L../../external/lib -lssmem_x86_64 -lpthread -lrt -lm
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/skiplist-pugh'
 make -C src/bst-bronson 
-make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/bst-bronson'
  
+make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/bst-bronson'
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/bst_bronson_java.o bst_bronson_java.c
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/test.o test_simple.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 ../../build/measurements.o ../../build/ssalloc.o ../../build/bst_bronson_java.o  ../../build/test.o -o ../../bin/lb-bst_bronson -m64 -L../../external/lib -lssmem_x86_64 -lpthread -lrt -lm
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/bst-bronson'
 make -C src/bst-drachsler 
- 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/bst-drachsler'
- 
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
@@ -628,7 +612,6 @@ cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/bst_tk.o bst_tk.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/intset.o intset.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/test.o test_simple.c
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 ../../build/measurements.o ../../build/ssalloc.o ../../build/bst.o ../../build/bst_tk.o ../../build/intset.o ../../build/test.o -o ../../bin/lb-bst_tk -m64 -L../../external/lib -lssmem_x86_64 -lpthread -lrt -lm 
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/bst-tk'
 make -C src/priorityqueue-alistarh-pughBased 
@@ -637,10 +620,12 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/priorityqueue-alistarh
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/skiplist-lock.o skiplist-lock.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/alistarh_pugh.o alistarh_pugh.c
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/htlock.o ../../src/htlock.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/clh.o ../../src/clh.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/intPriorityQueue.o intPriorityQueue.c
@@ -673,15 +658,15 @@ cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/queue-lock.o queue-lock.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/queue-ms.o queue-ms.c
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/htlock.o ../../src/htlock.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/clh.o ../../src/clh.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/intset.o intset.c
-cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/test.o test_simple.c
  
+cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/test.o test_simple.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 ../../build/measurements.o ../../build/ssalloc.o ../../build/htlock.o ../../build/clh.o ../../build/queue-lock.o ../../build/queue-ms.o ../../build/intset.o ../../build/test.o -o "../../bin/lb-qu_ms_hybrid" -m64 -L../../external/lib -lssmem_x86_64 -lpthread -lrt -lm
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/queue-ms_hybrid'
 make -C src/queue-optik0 
- 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/queue-optik0'
  
 ********************************** Using as a default number of cores: 24 on 1 socket
@@ -689,11 +674,9 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/queue-optik0'
 ********************************** If incorrect, create a manual entry in common/Makefile.common
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/queue-lock.o queue-lock.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/queue-optik.o queue-optik.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/htlock.o ../../src/htlock.c
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/clh.o ../../src/clh.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/intset.o intset.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/test.o test_simple.c
@@ -701,11 +684,10 @@ cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/queue-optik0'
 make -C src/queue-optik1 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/queue-optik1'
+ 
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
- 
 ********************************** If incorrect, create a manual entry in common/Makefile.common
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/queue-lock.o queue-lock.c
@@ -714,9 +696,11 @@ cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/clh.o ../../src/clh.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/intset.o intset.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/test.o test_simple.c
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 ../../build/measurements.o ../../build/ssalloc.o ../../build/htlock.o ../../build/clh.o ../../build/queue-lock.o ../../build/queue-optik.o ../../build/intset.o ../../build/test.o -o "../../bin/lb-qu_optik1" -m64 -L../../external/lib -lssmem_x86_64 -lpthread -lrt -lm
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/queue-optik1'
 make -C src/queue-optik2 
+ 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/queue-optik2'
  
 ********************************** Using as a default number of cores: 24 on 1 socket
@@ -725,7 +709,6 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/queue-optik2'
  
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/queue-lock.o queue-lock.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/queue-optik.o queue-optik.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/htlock.o ../../src/htlock.c
@@ -740,7 +723,6 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/queue-optik2a'
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/queue-lock.o queue-lock.c
@@ -773,7 +755,6 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/queue-optik4'
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/queue-lock.o queue-lock.c
@@ -792,7 +773,6 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/queue-optik5'
 ********************************** If incorrect, create a manual entry in common/Makefile.common
  
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
- 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/queue-lock.o queue-lock.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/queue-optik.o queue-optik.c
@@ -821,18 +801,21 @@ cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/stack-lock'
 make -C src/stack-optik 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/stack-optik'
- 
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/stack-lock.o stack-lock.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/stack-optik.o stack-optik.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/htlock.o ../../src/htlock.c
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/clh.o ../../src/clh.c
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/intset.o intset.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/test.o test_simple.c
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 ../../build/measurements.o ../../build/ssalloc.o ../../build/htlock.o ../../build/clh.o ../../build/stack-lock.o ../../build/stack-optik.o ../../build/intset.o ../../build/test.o -o "../../bin/lb-st_optik" -m64 -L../../external/lib -lssmem_x86_64 -lpthread -lrt -lm
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/stack-optik'
 make -C src/stack-optik1 
@@ -842,16 +825,24 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/stack-optik1'
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/stack-lock.o stack-lock.c
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/stack-optik.o stack-optik.c
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/htlock.o ../../src/htlock.c
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/clh.o ../../src/clh.c
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/intset.o intset.c
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/test.o test_simple.c
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 ../../build/measurements.o ../../build/ssalloc.o ../../build/htlock.o ../../build/clh.o ../../build/stack-lock.o ../../build/stack-optik.o ../../build/intset.o ../../build/test.o -o "../../bin/lb-st_optik1" -m64 -L../../external/lib -lssmem_x86_64 -lpthread -lrt -lm
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/stack-optik1'
+ 
 make -C src/stack-optik2 
 make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/stack-optik2'
  
@@ -860,9 +851,11 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/stack-optik2'
 ********************************** If incorrect, create a manual entry in common/Makefile.common
  
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/measurements.o ../../src/measurements.c
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
  
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/stack-lock.o stack-lock.c
+ 
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/stack-optik.o stack-optik.c
  
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -c -o ../../build/htlock.o ../../src/htlock.c
@@ -880,6 +873,7 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/map-lock'
  
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
+ 
 ********************************** If incorrect, create a manual entry in common/Makefile.common
  
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -c -o ../../build/measurements.o ../../src/measurements.c
@@ -908,7 +902,6 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/map-optik'
  
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
- 
 ********************************** If incorrect, create a manual entry in common/Makefile.common
  
 cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -c -o ../../build/measurements.o ../../src/measurements.c
@@ -964,15 +957,11 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/hashtable-seq'
  
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
- 
 ********************************** If incorrect, create a manual entry in common/Makefile.common
  
 cc -O3 -D_GNU_SOURCE -DSEQUENTIAL -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DSEQ_SSMEM_NO_FREE=1 -c -o ../../build/measurements.o ../../src/measurements.c
- 
 cc -O3 -D_GNU_SOURCE -DSEQUENTIAL -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DSEQ_SSMEM_NO_FREE=1 -c -o ../../build/ssalloc.o ../../src/ssalloc.c
- 
 cc -O3 -D_GNU_SOURCE -DSEQUENTIAL -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DSEQ_SSMEM_NO_FREE=1 -c -o ../../build/intset.o lists/intset.c
- 
 cc -O3 -D_GNU_SOURCE -DSEQUENTIAL -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DSEQ_SSMEM_NO_FREE=1 -c -o ../../build/seq.o lists/seq.c
  
 cc -O3 -D_GNU_SOURCE -DSEQUENTIAL -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DSEQ_SSMEM_NO_FREE=1 -c -o ../../build/linkedlist-seq.o lists/linkedlist-seq.c
@@ -982,6 +971,7 @@ cc -O3 -D_GNU_SOURCE -DSEQUENTIAL -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 
 cc -O3 -D_GNU_SOURCE -DSEQUENTIAL -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DSEQ_SSMEM_NO_FREE=1 -c -o ../../build/test.o test_simple.c
  
 cc -O3 -D_GNU_SOURCE -DSEQUENTIAL -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DSEQ_SSMEM_NO_FREE=1  ../../build/measurements.o ../../build/ssalloc.o ../../build/intset.o ../../build/seq.o ../../build/linkedlist-seq.o ../../build/hashtable-seq.o ../../build/test.o -o ../../bin/sq-ht -m64 -L../../external/lib -lssmem_x86_64 -lpthread -lrt -lm
+ 
 make[2]: Leaving directory '/home/ml/Desktop/ASCYLIB/src/hashtable-seq'
  
 make -C src/skiplist-seq 
@@ -990,7 +980,6 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/skiplist-seq'
  
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
- 
 ********************************** If incorrect, create a manual entry in common/Makefile.common
  
 cc -O3 -D_GNU_SOURCE -DSEQUENTIAL -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DSEQ_SSMEM_NO_FREE=1 -c -o ../../build/measurements.o ../../src/measurements.c
@@ -1012,7 +1001,6 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/bst-seq_internal'
  
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
- 
 ********************************** If incorrect, create a manual entry in common/Makefile.common
  
 cc -O3 -D_GNU_SOURCE -DSEQUENTIAL -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DSEQ_SSMEM_NO_FREE=1 -c -o ../../build/measurements.o ../../src/measurements.c
@@ -1036,7 +1024,6 @@ make[2]: Entering directory '/home/ml/Desktop/ASCYLIB/src/bst-seq_external'
  
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
- 
 ********************************** If incorrect, create a manual entry in common/Makefile.common
  
 cc -O3 -D_GNU_SOURCE -DSEQUENTIAL -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DSEQ_SSMEM_NO_FREE=1 -c -o ../../build/measurements.o ../../src/measurements.c
