@@ -2,7 +2,6 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 ********************************** Using as a default number of cores: 24 on 1 socket
 ********************************** Using as a default frequency      : 3.700 GHz
 ********************************** If incorrect, create a manual entry in common/Makefile.common
- 
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -10,7 +9,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jun 13 23:12:50 2022
+# Make data base, printed on Tue Jun 14 14:25:20 2022
 
 # Variables
 
@@ -93,7 +92,7 @@ PC_NAME = $(shell uname -n)
 # makefile (from '../../common/Makefile.common', line 207)
 ARCH_NAME = $(shell uname -m)
 # environment
-SESSION_MANAGER = local/ml-unify:@/tmp/.ICE-unix/1535,unix/ml-unify:/tmp/.ICE-unix/1535
+SESSION_MANAGER = local/ml-unify:@/tmp/.ICE-unix/2577,unix/ml-unify:/tmp/.ICE-unix/2577
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # makefile (from '../../common/Makefile.common', line 193)
@@ -119,7 +118,7 @@ LS_COLORS =
 # environment
 XDG_SESSION_DESKTOP = xfce
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-o5J1d7fVqOrk/agent.1535
+SSH_AUTH_SOCK = /tmp/ssh-iCm3mkTwvo6W/agent.2577
 # automatic
 %F = $(notdir $%)
 # makefile (from '../../common/Makefile.common', line 192)
@@ -143,7 +142,7 @@ QT_QPA_PLATFORMTHEME = qt5ct
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 1614
+SSH_AGENT_PID = 2660
 # makefile (from 'Makefile', line 12)
 BINS = $(BINDIR)/lb-ll_lazy$(BIN_SUFFIX)$(SUFFIX)
 # environment
@@ -193,7 +192,7 @@ BINDIR = $(ROOT)/bin
 # makefile (from '../../common/Makefile.common', line 15)
 CC = gcc
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-a111728b-70a1-49c3-bd67-ef3dc14bfa4b.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-7b2f5afb-135b-470c-ac35-35663ecc50b9.sock
 # environment
 COMPIZ_CONFIG_PROFILE = mint
 # environment
@@ -277,10 +276,11 @@ LIBSSMEM = $(ROOT)/external
 # environment
 LANG = C
 # environment
-VSCODE_PID = 19662
+VSCODE_PID = 3752
 # environment
 _CE_CONDA = 
 # variable set hash-table stats:
+ 
 # Load=133/1024=13%, Rehash=0, Collisions=26/383=7%
 
 # Pattern-specific Variable Values
@@ -289,14 +289,13 @@ _CE_CONDA =
 
 # Directories
 
-# . (device 54, inode 5375873): 17 files, no impossibilities.
+# . (device 53, inode 5375873): 17 files, no impossibilities.
 
 # 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 # No implicit rules.
- 
 
 # Files
 
@@ -469,6 +468,6 @@ intset.o: linkedlist-lock.h lazy.h clh.o
 # strcache performance: lookups = 74 / hit rate = 54%
 # hash-table stats:
 # Load=34/8192=0%, Rehash=0, Collisions=5/74=7%
-# Finished Make data base on Mon Jun 13 23:12:50 2022
+# Finished Make data base on Tue Jun 14 14:25:20 2022
 
  

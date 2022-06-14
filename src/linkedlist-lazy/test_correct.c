@@ -82,10 +82,17 @@ int seed = 0;
 __thread unsigned long * seeds;
 uint32_t rand_max;
 #define rand_min 1
+val = (size_t*) ssmem_alloc(alloc_data, sizeof(size_t));
+	}
+      val[0] = key;
 
-static volatile int stop;
-__thread uint32_t phys_id;
-
+      if(DS_ADD(set, key, val) == false)
+	{
+	  i--;
+	}
+      else
+	{
+	  val = NULL;
 volatile ticks *putting_succ;
 volatile ticks *putting_fail;
 volatile ticks *getting_succ;
@@ -153,7 +160,9 @@ test(void* thread)
   volatile ticks correction = getticks_correction_calc();
 #endif
     
-  seeds = seed_rand();
+  //seeds = seed_rand();                    //EDIT BY MADHAVA
+  unsigned long t[] = {343, 453, 664};      //EDIT BY MADHAVA
+  seeds = &t;                               //EDIT BY MADHAVA
 #if GC == 1
   alloc = (ssmem_allocator_t*) malloc(sizeof(ssmem_allocator_t));
   assert(alloc != NULL);

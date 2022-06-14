@@ -1,5 +1,6 @@
 #! /bin/bash
 
 #compilation instructions
+cd src/linkedlist-lazy/
 make clean #clean
-make -no-pie STATS=1 TEST=correct
+make TEST=old
