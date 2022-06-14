@@ -23,6 +23,7 @@
 
 #include "intset.h"
 #include "utils.h"
+#include <stdlib.h>
 
 //MODIFIED PART BY MADHAVA
 #define SIZE 1000000                      //size of the arrays, number of values, change if number of values change
@@ -383,10 +384,10 @@ main(int argc, char **argv)
   int* search_data = (int*) malloc(sizeof(int) *SIZE);
 
   for(int i = 0; i <= SIZE; i++){
-    fscan(init_vals,   " %d", init_data   +i);
-    fscan(update_vals, " %d", update_data +i);
-    fscan(delete_vals, " %d", delete_data +i);
-    fscan(search_vals, " %d", search_data +i);
+    fscanf(init_vals,   " %d", init_data   +i);
+    fscanf(update_vals, " %d", update_data +i);
+    fscanf(delete_vals, " %d", delete_data +i);
+    fscanf(search_vals, " %d", search_data +i);
   }
   //END OF MODIFIED PART BY MADHAVA
 
