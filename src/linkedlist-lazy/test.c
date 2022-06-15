@@ -106,15 +106,12 @@ test(void *data)
   
   printf("test\n");
   int* update_vals = arr_ptr[0];
-    printf("test\n");
   int* delete_vals = arr_ptr[1];
-    printf("test\n");
   int* search_vals = arr_ptr[2];
-    printf("test\n");
   int iterator = 0;
 
   for(iterator = 0; iterator < 53; iterator++){
-      printf("VALUEEEEEE!!! %d\n", update_vals + iterator);
+      printf("VALUEEEEEE!!! %d\n", update_vals[iterator]);
   }
 
   printf("%d\n", update_vals[SIZE-1]);
