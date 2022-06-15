@@ -372,7 +372,7 @@ main(int argc, char **argv)
 	
   set = set_new_l();
 	
-  //MODIFIED PART BY MADHAVA
+    //MODIFIED PART BY MADHAVA
   FILE* init_vals   = fopen(INIT_PATH  , "r");
   FILE* update_vals = fopen(UPDATE_PATH, "r");
   FILE* delete_vals = fopen(DELETE_PATH, "r");
@@ -383,12 +383,22 @@ main(int argc, char **argv)
   int* delete_data = (int*) malloc(sizeof(int) *SIZE);
   int* search_data = (int*) malloc(sizeof(int) *SIZE);
 
-  for(int i = 0; i <= SIZE; i++){
-    fscanf(init_vals,   " %d", init_data   +i);
-    fscanf(update_vals, " %d", update_data +i);
-    fscanf(delete_vals, " %d", delete_data +i);
-    fscanf(search_vals, " %d", search_data +i);
+  int iterator = 0;
+  while(iterator < SIZE){
+    fscanf(init_vals,   " %d", init_data   +iterator);
+    fscanf(update_vals, " %d", update_data +iterator);
+    fscanf(delete_vals, " %d", delete_data +iterator);
+    fscanf(search_vals, " %d", search_data +iterator);
+    iterator++;
   }
+
+  for(iterator = 0; iterator < 53; iterator++){
+      printf("%d\n", init_data[iterator]);
+  }
+
+  printf("%d\n", init_data[SIZE-1]);
+
+
   //END OF MODIFIED PART BY MADHAVA
 
 
