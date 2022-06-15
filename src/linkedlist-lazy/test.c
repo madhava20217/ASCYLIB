@@ -24,6 +24,15 @@
 #include "intset.h"
 #include "utils.h"
 
+//MODIFIED PART BY MADHAVA
+#define INIT_PATH   "../data/init.csv"    //path for searching for 'initialised' values
+#define UPDATE_PATH "../data/update.csv"  //path for searching for 'updating' values
+#define DELETE_PATH "../data/delete.csv"  //path for searching for 'delete' values
+#define SEARCH_PATH "../data/search.csv"  //path for searching for 'search' values
+//END OF MODIFIED PART BY MADHAVA
+
+#define SIZE 10000 //defining size for all array operations (for the file size)
+
 __thread unsigned long* seeds;
 int verbose = 0;
 
@@ -52,6 +61,7 @@ typedef ALIGNED(64) struct thread_data
   unsigned long nb_aborts_invalid_memory;
   unsigned long max_retries;
   unsigned int seed;
+  int** arrays; //edited_arr
   intset_l_t *set;
   barrier_t *barrier;
   int id;
@@ -87,84 +97,150 @@ test(void *data)
   init_clh_thread(&clh_local_p);
 #endif
 
-
+  
 
   /* Wait on barrier */
   barrier_cross(d->barrier);
+     //EDITED PORTION BY MADHAVA
+  int** arr_ptr = d->arrays;
+  
+  printf("test\n");
+  int* update_vals = arr_ptr[0];
+    printf("test\n");
+  int* delete_vals = arr_ptr[1];
+    printf("test\n");
+  int* search_vals = arr_ptr[2];
+    printf("test\n");
+  int iterator = 0;
+
+  for(iterator = 0; iterator < 53; iterator++){
+      printf("VALUEEEEEE!!! %d\n", update_vals + iterator);
+  }
+
+  printf("%d\n", update_vals[SIZE-1]);
 	
-  /* Is the first op an update? */
-  unext = (rand_range_re(&d->seed, 100) - 1 < d->update);
+  //END OF EDITED PORTION BY MADHAVA
+
+  long long int i = 0, j = 0, k = 0;
+      //edited
+  // <-------------------------------------------------------------------------------------------->
+
+    
+    i = 0, j = 0, k = 0;
+    while(i<SIZE || j<SIZE || k<SIZE){
+        //insert
+        if(i < SIZE){
+          val = update_vals[i];
+          if (set_add_l(d->set, val, val)) {
+              printf("added : %ld\n", val);
+              d->nb_added++;
+          }
+          printf("tried adding : %ld\n", val);
+          d->nb_add++;
+          i++;
+        }
+
+        //remove
+        if(j < SIZE){
+            val = delete_vals[j];
+            if (set_remove_l(d->set, val)) {
+                printf("removed : %ld\n", val);
+                d->nb_removed++;
+            } 
+            printf("tried removing : %ld\n", val);
+            d->nb_remove++;
+            j++;
+        }
+
+        //contains
+        if(k < SIZE){
+            val = search_vals[k];
+            if (set_contains_l(d->set, val)) {
+                printf("FOUND : %ld\n", val);
+                d->nb_found++;
+            }
+            printf("tried finding : %ld\n", val);
+            d->nb_contains++;
+            k++;	
+        }
+    }
+
+  // <-------------------------------------------------------------------------------------------->
+	
+	
+  // /* Is the first op an update? */
+  // unext = (rand_range_re(&d->seed, 100) - 1 < d->update);
 		
-  /* while (stop == 0) */
-  while (*running)
-    {
-      if (unext) { // update
+  // /* while (stop == 0) */
+  // while (*running)
+  //   {
+  //     if (unext) { // update
 				
-	if (last < 0) { // add
+	// if (last < 0) { // add
 					
-	  val = rand_range_re(&d->seed, d->range);
-	  if (set_add_l(d->set, val, val, TRANSACTIONAL)) {
-	    d->nb_added++;
-	    last = val;
-	  } 				
-	  d->nb_add++;
+	//   val = rand_range_re(&d->seed, d->range);
+	//   if (set_add_l(d->set, val, val, TRANSACTIONAL)) {
+	//     d->nb_added++;
+	//     last = val;
+	//   } 				
+	//   d->nb_add++;
 					
-	} else { // remove
+	// } else { // remove
 					
-	  if (d->alternate) { // alternate mode
+	//   if (d->alternate) { // alternate mode
 						
-	    if (set_remove_l(d->set, last, TRANSACTIONAL)) {
-	      d->nb_removed++;
-	    }
-	    last = -1;
+	//     if (set_remove_l(d->set, last, TRANSACTIONAL)) {
+	//       d->nb_removed++;
+	//     }
+	//     last = -1;
 						
-	  } else {
+	//   } else {
 					
-	    val = rand_range_re(&d->seed, d->range);
-	    if (set_remove_l(d->set, val, TRANSACTIONAL)) {
-	      d->nb_removed++;
-	      last = -1;
-	    } 
+	//     val = rand_range_re(&d->seed, d->range);
+	//     if (set_remove_l(d->set, val, TRANSACTIONAL)) {
+	//       d->nb_removed++;
+	//       last = -1;
+	//     } 
 					
-	  }
-	  d->nb_remove++;
-	}
+	//   }
+	//   d->nb_remove++;
+	// }
 				
-      } else { // read
+  //     } else { // read
 				
-	if (d->alternate) {
-	  if (d->update == 0) {
-	    if (last < 0) {
-	      val = d->first;
-	      last = val;
-	    } else { // last >= 0
-	      val = rand_range_re(&d->seed, d->range);
-	      last = -1;
-	    }
-	  } else { // update != 0
-	    if (last < 0) {
-	      val = rand_range_re(&d->seed, d->range);
-	      //last = val;
-	    } else {
-	      val = last;
-	    }
-	  }
-	}	else val = rand_range_re(&d->seed, d->range);
+	// if (d->alternate) {
+	//   if (d->update == 0) {
+	//     if (last < 0) {
+	//       val = d->first;
+	//       last = val;
+	//     } else { // last >= 0
+	//       val = rand_range_re(&d->seed, d->range);
+	//       last = -1;
+	//     }
+	//   } else { // update != 0
+	//     if (last < 0) {
+	//       val = rand_range_re(&d->seed, d->range);
+	//       //last = val;
+	//     } else {
+	//       val = last;
+	//     }
+	//   }
+	// }	else val = rand_range_re(&d->seed, d->range);
 				
-	if (set_contains_l(d->set, val, TRANSACTIONAL)) 
-	  d->nb_found++;
-	d->nb_contains++;			
-      }
+	// if (set_contains_l(d->set, val, TRANSACTIONAL)) 
+	//   d->nb_found++;
+	// d->nb_contains++;			
+  //     }
 			
-      /* Is the next op an update? */
-      if (d->effective) { // a failed remove/add is a read-only tx
-	unext = ((100 * (d->nb_added + d->nb_removed))
-		 < (d->update * (d->nb_add + d->nb_remove + d->nb_contains)));
-      } else { // remove/add (even failed) is considered an update
-	unext = (rand_range_re(&d->seed, 100) - 1 < d->update);
-      }
+  //     /* Is the next op an update? */
+  //     if (d->effective) { // a failed remove/add is a read-only tx
+	// unext = ((100 * (d->nb_added + d->nb_removed))
+	// 	 < (d->update * (d->nb_add + d->nb_remove + d->nb_contains)));
+  //     } else { // remove/add (even failed) is considered an update
+	// unext = (rand_range_re(&d->seed, 100) - 1 < d->update);
+  //     }
 			
-    }	
+  //   }	
  
   PF_PRINT;
   /* printf("[%d] tot: %10lu / pause: %10lu / ratio: %5.2f / xtests: %lu\n", */
@@ -357,40 +433,95 @@ main(int argc, char **argv)
   set = set_new_l();
 	
   /* stop = 0; */
-  *running = 1;
+  // *running = 1;
 	
   /* printf("Initializing STM\n"); */
 	
-  size_t ten_perc = initial / 10, tens = 1;
-  size_t ten_perc_nxt = ten_perc;
+  // size_t ten_perc = initial / 10, tens = 1;
+  // size_t ten_perc_nxt = ten_perc;
+  /* Populate set */
+  initial = SIZE;
+  printf("Adding %d entries to set\n", initial);
+
+  //edited
+  //MODIFIED PART BY MADHAVA
+  FILE* init_vals   = fopen(INIT_PATH  , "r");
+  FILE* update_vals = fopen(UPDATE_PATH, "r");
+  FILE* delete_vals = fopen(DELETE_PATH, "r");
+  FILE* search_vals = fopen(SEARCH_PATH, "r");
+
+  int* init_data   = (int*) malloc(sizeof(int) *SIZE);
+  int* update_data = (int*) malloc(sizeof(int) *SIZE);
+  int* delete_data = (int*) malloc(sizeof(int) *SIZE);
+  int* search_data = (int*) malloc(sizeof(int) *SIZE);
+
+  int iterator = 0;
+  while(iterator < SIZE){
+    fscanf(init_vals,   " %d", init_data   +iterator);          //RESULT IGNORED
+    fscanf(update_vals, " %d", update_data +iterator);          //RESULT IGNORED
+    fscanf(delete_vals, " %d", delete_data +iterator);          //RESULT IGNORED
+    fscanf(search_vals, " %d", search_data +iterator);          //RESULT IGNORED
+    iterator++;
+  }
+
+  // for(iterator = 0; iterator < 53; iterator++){
+  //     printf("%d\n", init_data[iterator]);
+  // }
+
+  // printf("%d\n", init_data[SIZE-1]);
+
+  //Creating pointer to arrays
+  int** arr_ptr = malloc(3*sizeof(int*));
+  arr_ptr[0] = update_data;
+  arr_ptr[1] = delete_data;
+  arr_ptr[2] = search_data;
+  //END OF MODIFIED PART BY MADHAVA
+	
+	
+  /* Init STM */
+  printf("Initializing STM\n");
+	
   /* Populate set */
   printf("Adding %d entries to set\n", initial);
-  if (initial < 10000)
-    {
-      i = 0;
-      while (i < initial) 
-	{
-	  val = rand_range(range);
-	  if (set_add_l(set, val, val, 0)) 
-	    {
-	      if (i == ten_perc_nxt)
-		{
-		  printf("%02lu%%  ", tens * 10); fflush(stdout);
-		  tens++;
-		  ten_perc_nxt = tens * ten_perc;
-		}
-	      i++;
-	    }
-	}
+
+
+  i = 0;
+  while (i < SIZE) {
+    val = init_data[i];
+    printf("%ld ANUJ\n", val);
+    if (set_add_l(set, val, 0)) {
+    //   i++;
     }
-  else
-    {
-      for (i = initial; i > 0; i--)
-	{
-	  set_add_l(set, i, i, 0);
-	}
-    }
-  printf("\n");
+    i++;
+  }
+
+
+  // if (initial < 10000)
+  //   {
+  //     i = 0;
+  //     while (i < initial) 
+	// {
+	//   val = rand_range(range);
+	//   if (set_add_l(set, val, val, 0)) 
+	//     {
+	//       if (i == ten_perc_nxt)
+	// 	{
+	// 	  printf("%02lu%%  ", tens * 10); fflush(stdout);
+	// 	  tens++;
+	// 	  ten_perc_nxt = tens * ten_perc;
+	// 	}
+	//       i++;
+	//     }
+	// }
+  //   }
+  // else
+  //   {
+  //     for (i = initial; i > 0; i--)
+	// {
+	//   set_add_l(set, i, i, 0);
+	// }
+  //   }
+  // printf("\n");
   size = set_size_l(set);
   printf("Set size     : %d\n", size);
 	
@@ -427,6 +558,7 @@ main(int argc, char **argv)
       data[i].set = set;
       data[i].barrier = &barrier;
       data[i].id = i;
+      data[i].arrays = arr_ptr;
       if (pthread_create(&threads[i], &attr, test, (void *)(&data[i])) != 0) {
 	fprintf(stderr, "Error creating thread\n");
 	exit(1);
@@ -439,18 +571,18 @@ main(int argc, char **argv)
   barrier_cross(&barrier);
 	
   printf("STARTING...\n");
-  gettimeofday(&start, NULL);
-  if (duration > 0) {
-    nanosleep(&timeout, NULL);
-  } else {
-    sigemptyset(&block_set);
-    sigsuspend(&block_set);
-  }
+  // gettimeofday(&start, NULL);
+  // if (duration > 0) {
+  //   nanosleep(&timeout, NULL);
+  // } else {
+  //   sigemptyset(&block_set);
+  //   sigsuspend(&block_set);
+  // }
 
-  /* AO_store_full(&stop, 1); */
-  *running = 0;
+  // /* AO_store_full(&stop, 1); */
+  // *running = 0;
 
-  gettimeofday(&end, NULL);
+  // gettimeofday(&end, NULL);
   printf("STOPPING...\n");
 	
   /* Wait for thread completion */
@@ -522,7 +654,7 @@ main(int argc, char **argv)
     }
   int size_after = set_size_l(set);
   printf("Set size      : %d (expected: %d)\n", size_after, size);
-  assert(size_after == size);
+  // assert(size_after == size);
   printf("Duration      : %d (ms)\n", duration);
   printf("#txs          : %lu (%f / s)\n", reads + updates, (reads + updates) * 1000.0 / duration);
 	

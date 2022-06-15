@@ -17,31 +17,31 @@ PROF = $(ROOT)/src
 all:	main
 
 measurements.o:
-	$(CC) $(CFLAGS) -c -o $(BUILDIR)/measurements.o $(PROF)/measurements.c
+	$(CC) $(CFLAGS) -no-pie -c -o $(BUILDIR)/measurements.o $(PROF)/measurements.c
 
 ssalloc.o:
-	$(CC) $(CFLAGS) -c -o $(BUILDIR)/ssalloc.o $(PROF)/ssalloc.c
+	$(CC) $(CFLAGS) -no-pie -c -o $(BUILDIR)/ssalloc.o $(PROF)/ssalloc.c
 
 htlock.o:
-	$(CC) $(CFLAGS) -c -o $(BUILDIR)/htlock.o $(PROF)/htlock.c
+	$(CC) $(CFLAGS) -no-pie -c -o $(BUILDIR)/htlock.o $(PROF)/htlock.c
 
 clh.o:
-	$(CC) $(CFLAGS) -c -o $(BUILDIR)/clh.o $(PROF)/clh.c
+	$(CC) $(CFLAGS) -no-pie -c -o $(BUILDIR)/clh.o $(PROF)/clh.c
 
 linkedlist-lock.o: 
-	$(CC) $(CFLAGS) -c -o $(BUILDIR)/linkedlist-lock.o linkedlist-lock.c
+	$(CC) $(CFLAGS) -no-pie -c -o $(BUILDIR)/linkedlist-lock.o linkedlist-lock.c
 
 lazy.o: linkedlist-lock.h linkedlist-lock.o htlock.o clh.o
-	$(CC) $(CFLAGS) -c -o $(BUILDIR)/lazy.o lazy.c	 
+	$(CC) $(CFLAGS) -no-pie -c -o $(BUILDIR)/lazy.o lazy.c	 
 
 intset.o: linkedlist-lock.h lazy.h clh.o
-	$(CC) $(CFLAGS) -c -o $(BUILDIR)/intset.o intset.c
+	$(CC) $(CFLAGS) -no-pie -c -o $(BUILDIR)/intset.o intset.c
 
 test.o: linkedlist-lock.h lazy.h intset.h
-	$(CC) $(CFLAGS) -c -o $(BUILDIR)/test.o $(TEST_FILE)
+	$(CC) $(CFLAGS) -no-pie -c -o $(BUILDIR)/test.o $(TEST_FILE)
 
 main: measurements.o ssalloc.o linkedlist-lock.o lazy.o intset.o test.o htlock.o clh.o
-	$(CC) $(CFLAGS) $(BUILDIR)/measurements.o $(BUILDIR)/ssalloc.o $(BUILDIR)/htlock.o $(BUILDIR)/clh.o $(BUILDIR)/linkedlist-lock.o $(BUILDIR)/lazy.o $(BUILDIR)/intset.o $(BUILDIR)/test.o -o $(BINS) $(LDFLAGS) 
+	$(CC) -no-pie $(CFLAGS) $(BUILDIR)/measurements.o $(BUILDIR)/ssalloc.o $(BUILDIR)/htlock.o $(BUILDIR)/clh.o $(BUILDIR)/linkedlist-lock.o $(BUILDIR)/lazy.o $(BUILDIR)/intset.o $(BUILDIR)/test.o -o $(BINS) $(LDFLAGS) 
 
 clean:
 	rm -f $(BINS)

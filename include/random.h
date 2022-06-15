@@ -47,7 +47,7 @@ fast_rand()
   return ((getticks()&4294967295UL)>>4);
 }
 
-
+//returns pointer to 3-array of unsigned long 
 static inline unsigned long* 
 seed_rand() 
 {

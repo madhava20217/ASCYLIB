@@ -131,6 +131,15 @@ test(void* thread)
   set_cpu(ID);
   ssalloc_init();
 
+  char input[50], output[50], update[50];                         //EDIT BY MADHAVA
+  sprintf(input, "../data/inputs/input%u.txt", ID);               //EDIT BY MADHAVA
+  sprintf(output, "../data/delete/delete%u.txt", ID);             //EDIT BY MADHAVA
+  sprintf(update, "../data/update/update%u.txt", ID);             //EDIT BY MADHAVA
+  FILE* INSERTIONS = fopen(input, "w");                           //EDIT BY MADHAVA
+  FILE* DELETIONS = fopen(output, "w");                           //EDIT BY MADHAVA
+  FILE* UPDATES = fopen(update, "w");                             //EDIT BY MADHAVA
+
+
   DS_TYPE* set = td->set;
 
   THREAD_INIT(ID);
@@ -157,7 +166,13 @@ test(void* thread)
   volatile ticks correction = getticks_correction_calc();
 #endif
     
-  seeds = seed_rand();
+  seeds = seed_rand();                                    //EDIT BY MADHAVA
+  // seeds = (unsigned long*) memalign(64, 64);            //EDIT BY MADHAVA
+  // seeds[0] = 1;
+  // seeds[1] = 11;
+  // seeds[2] = 111;
+
+
 #if GC == 1
   alloc = (ssmem_allocator_t*) malloc(sizeof(ssmem_allocator_t));
   assert(alloc != NULL);
@@ -188,6 +203,7 @@ test(void* thread)
   for(i = 0; i < num_elems_thread; i++) 
     {
       key = (my_random(&(seeds[0]), &(seeds[1]), &(seeds[2])) % (rand_max + 1)) + rand_min;
+      fprintf(INSERTIONS, "%ld ",key);              //EDIT BY MADHAVA
       if(DS_ADD(set, key, NULL) == false)
 	{
 	  i--;
@@ -235,7 +251,6 @@ test(void* thread)
   putting_count[ID] += my_putting_count;
   getting_count[ID] += my_getting_count;
   removing_count[ID]+= my_removing_count;
-
   putting_count_succ[ID] += my_putting_count_succ;
   getting_count_succ[ID] += my_getting_count_succ;
   removing_count_succ[ID]+= my_removing_count_succ;
@@ -259,6 +274,7 @@ test(void* thread)
 int
 main(int argc, char **argv) 
 {
+
   set_cpu(0);
   ssalloc_init();
   seeds = seed_rand();

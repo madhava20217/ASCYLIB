@@ -1,0 +1,16 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/ml/Desktop/ASCYLIB/src/linkedlist-lazy'
+********************************** Using as a default number of cores: 24 on 1 socket
+********************************** Using as a default frequency      : 3.700 GHz
+********************************** If incorrect, create a manual entry in common/Makefile.common
+cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -no-pie -c -o ../../build/measurements.o ../../src/measurements.c
+cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -no-pie -c -o ../../build/ssalloc.o ../../src/ssalloc.c
+cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -no-pie -c -o ../../build/linkedlist-lock.o linkedlist-lock.c
+cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -no-pie -c -o ../../build/htlock.o ../../src/htlock.c
+cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -no-pie -c -o ../../build/clh.o ../../src/clh.c
+cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -no-pie -c -o ../../build/lazy.o lazy.c	 
+cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -no-pie -c -o ../../build/intset.o intset.c
+cc -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 -no-pie -c -o ../../build/test.o test_simple.c
+cc -no-pie -O3 -D_GNU_SOURCE -DTAS -DDEFAULT -DCORE_NUM=24 -DFREQ_GHZ=3.700 -m64 -Wall -fno-strict-aliasing -I../../src/atomic_ops -I../../include -I../../external/include -DGC=1 -DINITIALIZE_FROM_ONE=1 -DRO_FAIL=1 ../../build/measurements.o ../../build/ssalloc.o ../../build/htlock.o ../../build/clh.o ../../build/linkedlist-lock.o ../../build/lazy.o ../../build/intset.o ../../build/test.o -o ../../bin/lb-ll_lazy -m64 -L../../external/lib -lssmem_x86_64 -lpthread -lrt -lm 
+make: Leaving directory '/home/ml/Desktop/ASCYLIB/src/linkedlist-lazy'
+ 
